@@ -1,0 +1,26 @@
+/* ------------Register page style-------------*/
+.register p {
+    text-align: center;
+}
+.register a {
+    color: #0963a7;
+}
+.checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+.checkbox p {
+    padding-left: 10px;
+}
+.register button {
+    border-radius: 5px;
+    background: #111827;
+    margin: 10px 0;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #fff;
+    outline: none;
+    border: none;
+}

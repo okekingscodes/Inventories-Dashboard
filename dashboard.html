@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <section id="menu">
+        <div class="logo">
+            <img src="images/google_logo.png" alt="logo">
+            <h2>Dynamic</h2>
+        </div>
+    
+        <ul class="items"> <!-- Changed the div to ul -->
+            <li><i class="fab fa-chart-pie-alt"></i><a href="dashboard.html">Dashboard</a></li>
+            <li><i class="fab fa-uikit"></i><a href="./inventories/inventory.html">Inventory</a></li>
+            <li><i class="fas fa-th-large"></i><a href="estimate.html">Estimate</a></li>
+            <li><i class="fas fa-edit"></i><a href="project-board.html">Project Board</a></li>
+            <div class="down">
+                <li><i class="fab fa-cc-vise"></i><a href="#">Settings</a></li>
+                <li><i class="fas fa-hamburger"></i><a href="#">Get Help</a></li>
+                <li><i class="fas fa-chart-line"></i><a href="#">Log Out</a></li>
+            </div>
+        </ul>
+    </section>
+    
+
+    <section id="interface">
+        <div class="navigation">
+            <div class="nav">
+                <i id="menu-btn" class="fas fa-bars"></i>
+                <div class="search">
+                    <i class="far fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+        
+            <div class="profile">
+                <i class="far fa-bell"></i>
+                <img src="images/profile.JPG" alt="">
+            </div>
+        </div>
+
+        <h3 class="i-name">
+            Dashboard
+        </h3>
+
+        <div class="values">
+            <div class="val-box">
+                <i class="fas fa-users"></i>
+                <div>
+                    <h3>8, 267</h3>
+                    <span>New Users</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fas fa-shopping-cart"></i>
+                <div>
+                    <h3>8, 267</h3>
+                    <span>Total Orders</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fas fa-acorn"></i>
+                <div>
+                    <h3>8, 267</h3>
+                    <span>Product Sell</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fas fa-dollar-sign"></i>
+                <div>
+                    <h3>8, 267</h3>
+                    <span>This month</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="board">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Title</td>
+                        <td>Status</td>
+                        <td>Site Name</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="people">
+                            <img src="images/profile.JPG" alt="">
+                            <div class="people-des">
+                                <h5>Odim Kingsley</h5>
+                                <p>okekings@gmail.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <h5>Software Engineer</h5>
+                        </td>
+
+                        <td class="active">Active</td>
+
+                        <td class="role">
+                            <p>Dynamic construction company</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <img src="images/profile.JPG" alt="">
+                            <div class="people-de">
+                                <h5>Odim Kingsley</h5>
+                                <p>okekings@gmail.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <h5>Software Engineer</h5>
+                        </td>
+
+                        <td class="active">Active</td>
+
+                        <td class="role">
+                            <p>Dynamic construction company</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <img src="images/profile.JPG" alt="">
+                            <div class="people-de">
+                                <h5>Odim Kingsley</h5>
+                                <p>okekings@gmail.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <h5>Software Engineer</h5>
+                        </td>
+
+                        <td class="active">Active</td>
+
+                        <td class="role">
+                            <p>Dynamic construction company</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <img src="images/profile.JPG" alt="">
+                            <div class="people-de">
+                                <h5>Odim Kingsley</h5>
+                                <p>okekings@gmail.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <h5>Software Engineer</h5>
+                        </td>
+
+                        <td class="active">Active</td>
+
+                        <td class="role">
+                            <p>Dynamic construction company</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <img src="images/profile.JPG" alt="">
+                            <div class="people-de">
+                                <h5>Odim Kingsley</h5>
+                                <p>okekings@gmail.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <h5>Software Engineer</h5>
+                        </td>
+
+                        <td class="active">Active</td>
+
+                        <td class="role">
+                            <p>Dynamic construction company</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <img src="images/profile.JPG" alt="">
+                            <div class="people-de">
+                                <h5>Odim Kingsley</h5>
+                                <p>okekings@gmail.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <h5>Software Engineer</h5>
+                        </td>
+
+                        <td class="active">Active</td>
+
+                        <td class="role">
+                            <p>Dynamic construction company</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <img src="images/profile.JPG" alt="">
+                            <div class="people-de">
+                                <h5>Odim Kingsley</h5>
+                                <p>okekings@gmail.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <h5>Software Engineer</h5>
+                        </td>
+
+                        <td class="active">Active</td>
+
+                        <td class="role">
+                            <p>Dynamic construction company</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <img src="images/profile.JPG" alt="">
+                            <div class="people-de">
+                                <h5>Odim Kingsley</h5>
+                                <p>okekings@gmail.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <h5>Software Engineer</h5>
+                        </td>
+
+                        <td class="active">Active</td>
+
+                        <td class="role">
+                            <p>Dynamic construction company</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <img src="images/profile.JPG" alt="">
+                            <div class="people-de">
+                                <h5>Odim Kingsley</h5>
+                                <p>okekings@gmail.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <h5>Software Engineer</h5>
+                        </td>
+
+                        <td class="active">Active</td>
+
+                        <td class="role">
+                            <p>Dynamic construction company</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <img src="images/profile.JPG" alt="">
+                            <div class="people-de">
+                                <h5>Odim Kingsley</h5>
+                                <p>okekings@gmail.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <h5>Software Engineer</h5>
+                        </td>
+
+                        <td class="active">Active</td>
+
+                        <td class="role">
+                            <p>Dynamic construction company</p>
+                        </td>
+                    </tr>
+
+      
+                </tbody>
+
+            </table>
+        </div>
+          <!-------Pages------->
+          <div class="pages">
+            <div class="pre"><</div>
+            <div class="pre">1</div>
+            <div class="pre">2</div>
+            <div class="pre">3</div>
+            <div class="pre">></div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="inventory.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <section id="menu">
+        <div class="logo">
+            <img src="../images/google_logo.png" alt="logo">
+            <h2>Dynamic</h2>
+        </div>
+    
+        <ul class="items"> <!-- Changed the div to ul -->
+            <li><i class="fab fa-chart-pie-alt"></i><a href="../dashboard.html">Dashboard</a></li>
+            <li><i class="fab fa-uikit"></i><a href="inventory.html">Inventory</a></li>
+            <li><i class="fas fa-th-large"></i><a href="estimate.html">Estimate</a></li>
+            <li><i class="fas fa-edit"></i><a href="project-board.html">Project Board</a></li>
+            <div class="down">
+                <li><i class="fab fa-cc-vise"></i><a href="#">Settings</a></li>
+                <li><i class="fas fa-hamburger"></i><a href="#">Get Help</a></li>
+                <li><i class="fas fa-chart-line"></i><a href="logout.html">Logout</a></li>
+            </div>
+        </ul>
+    </section>
+    
+
+    <section id="interface">
+        <div class="navigation">
+            <div class="nav">
+                <i id="menu-btn" class="fas fa-bars"></i>
+                <div class="search">
+                    <i class="far fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+        
+            <div class="profile">
+                <i class="far fa-bell"></i>
+                <img src="../images/profile.JPG" alt="">
+            </div>
+        </div>
+
+        <h3 class="i-name">
+            Inventory
+        </h3>
+
+        <div class="values">
+            <div class="val-box">
+                <i class="fas fa-users"></i>
+                <div>
+                    <h3>8, 267</h3>
+                    <span>Total Workers</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fas fa-shopping-cart"></i>
+                <div>
+                    <h3>8, 267</h3>
+                    <span>Total Orders</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fas fa-acorn"></i>
+                <div>
+                    <h3>8, 267</h3>
+                    <span>Product Sell</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fas fa-dollar-sign"></i>
+                <div>
+                    <h3>8, 267</h3>
+                    <span>This month</span>
+                </div>
+            </div>
+        </div>
+        <!----------ADD PRODUCTS MACKUP---------------------->
+        <div class="addButtons">
+            <div class="addProductBtn" id="show-addBtn">
+                ADD PRODUCT
+            </div>
+            <div class="addProductBtn">
+                UPDATE PRODUCT
+            </div>
+            <div class="searchProductBar">
+                <input type="text">
+                <button id="searchBtn">Search</button> 
+            </div>
+        </div>
+        
+        <div class="tabContainer">
+            <div class="buttonContainer">
+                <button onclick="showPanel(0, '#d7d4d4')">Warehouse</button>
+                <button onclick="showPanel(1, '#d7d4d4')">On-Hold</button>
+                <button onclick="showPanel(2, '#d7d4d4')">On-Site</button>
+            </div>
+       
+            <div class="tabPanel">
+                <div class="board">
+                    <table width="100%" id="warehouse">
+                        <thead class="thead">
+                            <tr>
+                                <td>Product Name</td>
+                                <td>Product ID</td>
+                                <td>Specification</td>
+                                <td>Location <br>(Shelf/Section)</td>
+                                <td>Quantity</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+              <!-------Pages------->
+                <div class="pages">
+                    <div class="pre">&lt;</div>
+                    <div class="pre">1</div>
+                    <div class="pre">2</div>
+                    <div class="pre">3</div>
+                    <div class="pre">&gt;</div>
+                </div>
+            </div>
+            
+
+            <!-- Content for the second tab goes here -->
+            <div class="tabPanel">
+                <div class="board">
+                    <table width="100%">
+                        <thead class="thead">
+                            <tr>
+                                <td>S/N</td>
+                                <td>Product Name</td>
+                                <td>Product ID</td>
+                                <td>Modified By</td>
+                                <td>Date</td>
+                                <td>Action</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>3M Road Light</td>
+                                <td>AB1325GX</td>
+                                <td>Jimmy Robby</td>
+                                <td>09-28-2023</td>
+                                <td class="actionBtn"><a href="check-out.html">Approved</a></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>3M Road Light</td>
+                                <td>AB1325GX</td>
+                                <td>Jimmy Robby</td>
+                                <td>09-28-2023</td>
+                                <td class="actionBtn" id="checkOut">Approved</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+              <!-------Pages------->
+                <div class="pages">
+                    <div class="pre">&lt;</div>
+                    <div class="pre">1</div>
+                    <div class="pre">2</div>
+                    <div class="pre">3</div>
+                    <div class="pre">&gt;</div>
+                </div>                
+            </div>
+            
+            <!-- Content for the third tab goes here -->
+            <div class="tabPanel">
+                <div class="board">
+                    <table width="100%">
+                        <thead class="thead">
+                            <tr>
+                                <td>S/N</td>
+                                <td>Product Name</td>
+                                <td>Specification</td>
+                                <td>Job Tag</td>
+                                <td>Staff ID</td>
+                                <td>Action</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>3M Road Lights</td>
+                                <td>50x100</td>
+                                <td>Churchhill Square</td>
+                                <td>TWF001</td>
+                                <td class="actionBtn"><a href="check-in.html">Check-In</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            
+              <!-------Pages------->
+                <div class="pages">
+                    <div class="pre">&lt;</div>
+                    <div class="pre">1</div>
+                    <div class="pre">2</div>
+                    <div class="pre">3</div>
+                    <div class="pre">&gt;</div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!--------VIEW PRODUCT DETAILS----->
+            <div class="productDetail">
+                <div class="close-btn">&times;</div>
+                <h2>PRODUCT DETAILS</h2>
+                <p>Product Name: <span>3M Road Light</span></p>
+                <p>Product ID: <span>AB1325GX</span></p>
+                <p>Specification: <span>50 x 100</span></p>
+                <p>Location: <span>BM2018</span></p>
+                <p>Quantity: <span>20</span></p>
+                <p>Run No.: <span>1367522</span></p>
+                <p>Usage Type: <span>Size</span></p>
+                <p>Description: <span>Lorem ipsum dolor sit amet.</span></p>
+                <p>Status: <span>Warehouse</span></p>
+            </div>
+
+
+            <div id="myModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <!-- modal content -->  
+                        <div class="modal-body">
+                            content
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            
+            <!--------MATERIALS IN USE----->
+            <div class="material-in-use">
+                <div class="close-btn">&times;</div>
+                <h2>MATERIAL IN-USE</h2>
+                <p>Product Name: <span>3M Road Light</span></p>
+                <p>Product ID: <span>AB1325GX</span></p>
+                <p>Staff ID: <span>TWF001</span></p>
+                <p>Material Used: <span>5</span></p>
+                <button>ADD</button>
+                <span><select name="" id="">
+                    <option value="size">Size</option>
+                    <option value="quantity">Quantity</option>
+                </select></span>
+                <button type="submit" class="formBtn">UPDATE</button>
+            </div>
+
+    </section>
+    
+        <!---------Add Item Popup--------------------->
+        <div class="popup">
+            <div class="close-btn">&times;</div>
+            <h3>ADD PRODUCT</h3>
+            <form action="" method="POST" name="addProductToWarehouse">
+                    <input type="text" id="" name="productName" placeholder="Product Name">
+                    <input type="text" id="" name="productId" placeholder="Product ID">
+                    <input type="text" id="" name="specification" placeholder="Specification">
+                    <input type="text" id="" name="location" placeholder="Location">
+                    <input type="number" id="" name="quantity" placeholder="Quantity">
+                    <input type="number" id="" name="runNo" placeholder="Run No.">
+                <select name="category" id="category">
+                    <option value="select">Usage Type</option>
+                    <option value="size">Size</option>
+                    <option value="quantity">Quantity</option>
+                </select>
+                    <input type="text" id="" name="description" placeholder="Description">
+                    <input type="text" id="" name="status" placeholder="Status">
+                <button type="button" class="add-item-btn" id="addItemBtn" onclick="addNewProduct();">Add</button>
+            </form>
+                
+        </div>
+
+
+   
+    
+    
+      
+
+
+
+    <script src="inventory.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+/*-----------ADD PRODUCT BUTTONS STYLE----------------*/
+.addButtons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0 15px 30px;
+  }
+  .addButtons .addProductBtn {
+    background: #111827;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .addButtons .addProductBtn:hover {
+    background: transparent;
+    border-bottom: 2px solid #111827;
+    color: #111827;
+  }
+.actionBtn a {
+  text-decoration: none;
+  color: #fff;
+}
+.actionBtn a:hover {
+  color: #fff;
+}
+  /*-----------TABS INVENTORY STYLE----------------*/
+  .inventory-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 40px;
+  }
+  .inventory-buttons .item-btn {
+    background: #111827;
+    color: #828997;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .inventory-buttons .item-btn:hover {
+    background: transparent;
+    color: #111827;
+    border: 1px solid #111827;
+  }
+  
+  .tabContainer {
+    width: 98%;
+    margin-left: 30px;
+  }
+  .tabContainer .buttonContainer {
+    height: 20%;
+  }
+  .tabContainer .buttonContainer button {
+    width: 33%;
+    height: 100%;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    color: #111827;
+  }
+  .tabContainer .buttonContainer button:hover {
+    color: #787d8d;
+    background: #2b2b2b;
+  }
+  
+  .tabContainer .tabPanel {
+    padding-top: 50px;
+    box-sizing: border-box;
+    display: none;
+  }
+  element.style {
+    /* background-color: rgb(244, 67, 54); */
+    color: white;
+  }
+  
+  .inventory-addBtn {
+    margin: 20px 0 15px 30px;
+    background: #111827;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    width: 150px;
+  }
+
+  
+/* Popup add item style */
+.popup,
+.material-in-use {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 380px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms;
+                opacity: 200ms ease-in-out 0ms;
+                transform: 200ms ease-in-out 0ms;
+}
+.popup.active,
+.material-in-use.active {
+    top: 35%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 200ms;
+                opacity: 200ms ease-in-out 0ms;
+                transform: 200ms ease-in-out 0ms;
+
+}
+.popup .close-btn,
+.material-in-use .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#productDetails {
+  cursor: pointer;
+}
+.popup h3 {
+  margin: 10px 0;
+  text-align: center;
+}
+.popup select {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  outline: none;
+}
+.popup input {
+  display: block;
+  padding: 5px 10px;
+  margin: 10px 5px;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #828997;
+  color: #444a53;
+  box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.1);
+}
+.popup .add-item-btn {
+  background: #111827;
+  padding: 5px 10px;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  float: right;
+  box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+/*--------Check-In Style-----------*/
+.checkIn,
+.checkOut {
+  background: #eee;
+  margin: 100px 30px 15px 40px;
+  max-width: 500px;
+  box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+  position: relative;
+  height: 850px;
+}
+.checkOut {
+  height: 500px;
+}
+.checkIn h2,
+.checkOut h2 {
+  background: #111827;
+  padding: 10px 15px;
+  margin-bottom: 25px;
+  color: #eee;
+  border-radius: 5px;
+  text-align: center;
+}
+.checkIn p,
+.checkOut p {
+  padding: 15px 0;
+  margin: 5px 20px;
+}
+.checkIn input,
+.checkOut input {
+  float: right;
+  margin: 12px 30px 5px 0;
+  width: 250px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 1px solid #111827;
+}
+.checkIn textarea {
+  width: 350px;
+  height: 150px;
+  margin: 10px auto 10px 30px;
+  padding: 10px 15px;
+  color: #2b2b2b;
+}
+.checkIn .formBtn,
+.checkOut .formBtn {
+  background: #111827;
+  color: #eee;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 93%;
+  right: 100px;
+}
+.checkOut .formBtn {
+  background: #111827;
+  color: #eee;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 85%;
+  right: 100px;
+}
+.checkIn .formBtn:hover,
+.checkout .formBtn:hover {
+  background: transparent;
+  color: #111827;
+  border-bottom: 2px solid #111827;
+}
