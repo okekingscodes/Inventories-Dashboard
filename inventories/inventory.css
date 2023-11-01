@@ -1,3 +1,17 @@
+a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0000ee;
+  margin-right: 4px;
+}
+label.validation-error {
+  color: red;
+  margin-left: 5px;
+}
+.hide {
+  display: none;
+}
+
 /*-----------ADD PRODUCT BUTTONS STYLE----------------*/
 .addButtons {
     display: flex;
@@ -130,6 +144,9 @@
     line-height: 15px;
     border-radius: 15px;
     cursor: pointer;
+}
+.productDetail {
+  display: none;
 }
 #productDetails {
   cursor: pointer;

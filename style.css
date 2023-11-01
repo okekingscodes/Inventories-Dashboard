@@ -306,7 +306,10 @@ table {
 tr {
   border-bottom: 5px solid #eef0f5;
 }
-thead td {
+tr:nth-child(even),table.list thead>tr {
+  background: #dddddd;
+}
+thead th {
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 400;

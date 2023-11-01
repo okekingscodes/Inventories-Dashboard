@@ -107,11 +107,15 @@
                     <table width="100%" id="warehouse">
                         <thead class="thead">
                             <tr>
-                                <td>Product Name</td>
-                                <td>Product ID</td>
-                                <td>Specification</td>
-                                <td>Location <br>(Shelf/Section)</td>
-                                <td>Quantity</td>
+                                <th>Product Name</th>
+                                <th>Product ID</th>
+                                <th>Specification</th>
+                                <th>Location <br>(Shelf/Section)</th>
+                                <th>Quantity</th>
+                                <th>Run No.</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -137,12 +141,12 @@
                     <table width="100%">
                         <thead class="thead">
                             <tr>
-                                <td>S/N</td>
-                                <td>Product Name</td>
-                                <td>Product ID</td>
-                                <td>Modified By</td>
-                                <td>Date</td>
-                                <td>Action</td>
+                                <th>S/N</th>
+                                <th>Product Name</th>
+                                <th>Product ID</th>
+                                <th>Modified By</th>
+                                <th>Date</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -182,12 +186,12 @@
                     <table width="100%">
                         <thead class="thead">
                             <tr>
-                                <td>S/N</td>
-                                <td>Product Name</td>
-                                <td>Specification</td>
-                                <td>Job Tag</td>
-                                <td>Staff ID</td>
-                                <td>Action</td>
+                                <th>S/N</th>
+                                <th>Product Name</th>
+                                <th>Specification</th>
+                                <th>Job Tag</th>
+                                <th>Staff ID</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -231,17 +235,6 @@
                 <p>Status: <span>Warehouse</span></p>
             </div>
 
-
-            <div id="myModal" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <!-- modal content -->  
-                        <div class="modal-body">
-                            content
-                        </div>
-                    </div>   
-                </div>
-            </div>
             
             <!--------MATERIALS IN USE----->
             <div class="material-in-use">
@@ -266,19 +259,20 @@
             <div class="close-btn">&times;</div>
             <h3>ADD PRODUCT</h3>
             <form action="" method="POST" name="addProductToWarehouse">
-                    <input type="text" id="" name="productName" placeholder="Product Name">
-                    <input type="text" id="" name="productId" placeholder="Product ID">
-                    <input type="text" id="" name="specification" placeholder="Specification">
-                    <input type="text" id="" name="location" placeholder="Location">
-                    <input type="number" id="" name="quantity" placeholder="Quantity">
-                    <input type="number" id="" name="runNo" placeholder="Run No.">
+                    <label class="validation-error hide" id="fullNameValidationError">All fields are required.</label>
+                    <input type="text" id="productName" name="productName" placeholder="Product Name">
+                    <input type="text" id="productId" name="productId" placeholder="Product ID">
+                    <input type="text" id="specification" name="specification" placeholder="Specification">
+                    <input type="text" id="location" name="location" placeholder="Location">
+                    <input type="number" id="quantity" name="quantity" placeholder="Quantity">
+                    <input type="number" id="runNo" name="runNo" placeholder="Run No.">
                 <select name="category" id="category">
                     <option value="select">Usage Type</option>
                     <option value="size">Size</option>
                     <option value="quantity">Quantity</option>
                 </select>
-                    <input type="text" id="" name="description" placeholder="Description">
-                    <input type="text" id="" name="status" placeholder="Status">
+                    <input type="text" id="description" name="description" placeholder="Description">
+                    <input type="text" id="status" name="status" placeholder="Status">
                 <button type="button" class="add-item-btn" id="addItemBtn" onclick="addNewProduct();">Add</button>
             </form>
                 
@@ -292,6 +286,6 @@
 
 
 
-    <script src="inventory.js"></script>
+    <script src="newscript.js"></script>
 </body>
 </html>
